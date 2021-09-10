@@ -1,6 +1,6 @@
 const { connect } = require('getstream');
 const bcrypt = require('bcrypt');
-const StreamChat = require('stream-chat');
+const StreamChat = require('stream-chat').StreamChat;
 const crypto = require('crypto');
 
 require('dotenv').config();
@@ -52,7 +52,7 @@ const login = async (req, res) => {
     } catch (error) {
         console.log(error);
 
-        res.state(500).json({ message: error });
+        res.status(500).json({ message: error });
     }
 };
 
