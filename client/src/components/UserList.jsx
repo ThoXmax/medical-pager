@@ -22,6 +22,7 @@ const UserItem = ({ user }) => {
                 <Avatar image={user.name} name={user.fullName || user.id} size={32} />
                 <p className="user-item__name">{user.fullName || user.id}</p>
             </div>
+            <InviteIcon />
         </div>
     )
 }
